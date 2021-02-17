@@ -27,7 +27,7 @@
               placeholder="xxx"
               id="my-text"
               maxlength="3"
-              onkeyup="stoppedTyping()"
+              onkeyup="activateSubmitBtn()"
             />
             <label class="label" for="birthday">date of birth </label>
             <input
@@ -35,7 +35,7 @@
               type="date"
               id="birthday"
               name="birthday"
-              onkeyup="stoppedTyping()"
+              onkeyup="activateSubmitBtn()"
               id="my-text"
             />
 
@@ -46,7 +46,7 @@
     </main>
 
     <script>
-      function stoppedTyping() {
+      function activateSubmitBtn() {
         if (document.getElementById('my-text').value === '') {
           document.getElementById('btn').disabled = true;
           verify();
