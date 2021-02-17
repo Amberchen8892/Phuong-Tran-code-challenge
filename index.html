@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phuong Tran || Code Challenge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img
+        src="https://user-images.githubusercontent.com/52906397/108260666-d7993900-711f-11eb-8bf5-aef1ac1fd166.png"
+        alt="W3C*SVG"
+      />
+    </header>
+    <main>
+      <div class="container">
+        <div class="title">
+          <h1>Please enter the following information</h1>
+        </div>
+        <div class="info">
+          <form class="info-input" id="form">
+            <label class="label">ssn (last4) xxx-xx-</label>
+            <input
+              class="input"
+              name="snn"
+              placeholder="xxx"
+              id="my-text"
+              maxlength="3"
+              onkeyup="stoppedTyping()"
+            />
+            <label class="label" for="birthday">date of birth </label>
+            <input
+              class="input input-two"
+              type="date"
+              id="birthday"
+              name="birthday"
+              onkeyup="stoppedTyping()"
+              id="my-text"
+            />
+
+            <button id="btn" onclick="verify()" disabled>Submit</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      function stoppedTyping() {
+        if (document.getElementById('my-text').value === '') {
+          document.getElementById('btn').disabled = true;
+          verify();
+        } else {
+          document.getElementById('btn').disabled = false;
+        }
+      }
+      function verify() {
+        const valueDate = document.getElementById('birthday').value;
+        const snn = document.getElementsByName('snn')[0].value;
+
+        console.log(Number.isInteger(snn));
+        if (!valueDate && Number.isInteger(snn) === false) {
+          alert('Please check your ssn and  day of birth');
+        } else {
+          alert('Form is submited');
+        }
+      }
+    </script>
+  </body>
+</html>
