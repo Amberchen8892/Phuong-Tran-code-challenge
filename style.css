@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,100&family=Roboto:wght@100&display=swap');
+
 :root {
   --heading-color: #2973af;
   --disabled-button: #edf0ed;
@@ -11,6 +12,7 @@
   box-sizing: border-box;
   margin: 0;
 }
+
 body {
   background-color: var(--bg-color);
   overflow: hidden;
@@ -26,6 +28,7 @@ body {
   border-bottom-right-radius: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 main {
   height: 85vh;
 
@@ -33,6 +36,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .container {
   width: 70vw;
   height: 65%;
@@ -40,6 +44,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .title {
   width: 100%;
   height: 30%;
@@ -51,6 +56,7 @@ main {
   border-bottom: 0.1px solid lightgray;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.09);
 }
+
 .title h1 {
   padding-top: 0.9rem;
   color: var(--heading-color);
@@ -58,10 +64,10 @@ main {
   font-weight: 700;
   font-family: 'Raleway', sans-serif;
 }
+
 .info {
   width: 100%;
   height: 80%;
-
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   display: flex;
@@ -69,6 +75,7 @@ main {
   align-items: center;
   text-align: center;
 }
+
 .info-input {
   height: 70%;
   width: 80%;
@@ -76,9 +83,11 @@ main {
   line-height: 50px;
   margin: 0;
 }
+
 ::placeholder {
   color: lightgray;
 }
+
 .label {
   font-family: 'Roboto', sans-serif;
   font-weight: 100 !important;
@@ -86,9 +95,9 @@ main {
   color: lightgray;
   width: 50%;
   height: 40px;
-
   float: left;
 }
+
 .input {
   width: 50%;
   height: 40px;
@@ -98,9 +107,11 @@ main {
   border: 0.3px solid lightgray;
   float: right;
 }
+
 .input-two {
   margin-top: 10px;
 }
+
 #btn {
   width: 130px;
   height: 35px;
@@ -117,16 +128,22 @@ main {
   background-color: var(--enabled-button);
   box-shadow: 1px 5px #717a5e;
 }
+
 #btn:disabled {
   box-shadow: 1px 5px #d9e2db;
   background-color: var(--disabled-button);
 }
+
 #btn:focus {
   outline: 0;
 }
-@media (max-width: 280px) {
+/* ------ responsive------- */
+@media (max-width: 380px) {
+  .main {
+    height: 90vh;
+  }
   .title h1 {
-    font-size: 0.5rem;
+    font-size: 0.1rem;
   }
   .info-input {
     text-align: center;
@@ -144,9 +161,11 @@ main {
   }
   #btn {
     width: 80px;
+
     position: fixed;
-    left: 40%;
-    bottom: 20%;
+    left: 10%;
+    bottom: 15% !important;
+    /* margin-top: 50px !important; */
   }
 }
 @media (max-width: 600px) {
